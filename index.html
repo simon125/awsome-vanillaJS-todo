@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Awsome todo list app</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <nav>
+            <div class="navigation">
+                <div class="menu-item active"><a href="#">Main</a></div>
+                <div class="menu-item"><a href="#">History</a></div>
+                <div class="menu-item"><a href="#">Settings</a></div>
+                <div class="menu-item"><a href="#">Contact me</a></div>
+            </div>
+        </nav>
+        <main>
+            <section class="main">
+                <div class="add-task-box">
+                    <form>
+                        <label for="title">Title</label>
+                        <input id="title" type="text" name="title" required placeholder="Type title of task..." autocomplete="off">
+                        <label for="start">Pick date of start</label>
+                        <input type="date" id="start">
+                        <label for="end">Pick date of end</label>
+                        <input type="date" id="end">
+                        <label for="priority">Pick priority</label>
+                        <select name="priority" id="priority">
+                            <option value="1">important</option>
+                            <option value="2">more important</option>
+                            <option value="3">the most important</option>
+                        </select>
+                        <label for="content">Content</label>
+                        <textarea required name="content" id="content" cols="20" rows="5" placeholder="Type content of task..."></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="tasks-box">
+
+                    <ul id="tasks" class="tasks">
+
+                        <li class="list-item">
+
+                            <h2 class="task-title">Lorem, ipsum dolor.</h2>
+                            <div class="priority">
+                                Priority: 
+                                <i class="fas fa-exclamation"></i>
+                                <i class="fas fa-exclamation"></i>
+                                <i class="fas fa-exclamation"></i>
+                            </div>
+
+                            <p class="task-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ad
+                                similique beatae esse numquam impedit!</p>
+
+                            <div class="option-icons">
+                                <i class="far fa-check-circle done"></i>
+                                <i class="fas fa-edit edit-task"></i>
+                                <i class="fas fa-times-circle delete-task"></i>
+                            </div>
+                            <i class="fas fa-arrow-circle-right show-content"></i>
+                            <div class="time-box">
+                                <div class="start-date"><strong>Start day:</strong> 12-12-1324</div>
+                                <div class="end-date"><strong>Deadline: </strong> 12-12-1324</div>
+                                <div class="days-to-end" id="days-to-end"><strong>Days left:</strong> 23</div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="trash">
+                <ul class="trash-tasks" id="trash"></ul>
+            </section>
+            <section class="settings">
+                <div class="input-group">
+                    <input type="radio" value="green" name="color">
+                    <input type="radio" value="blue" name="color">
+                    <input type="radio" value="red" name="color">
+                </div>
+                <div class="input-group">
+                    <input type="radio" value="10" name="font-size">
+                    <input type="radio" value="15" name="font-size">
+                    <input type="radio" value="20" name="font-size">
+                </div>
+
+            </section>
+            <section class="contact">
+
+            </section>
+        </main>
+
+    </div>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
