@@ -28,6 +28,9 @@ main{
 }
 .navigation{
     display: flex;
+    line-height: 60px;
+    text-decoration: none;
+    color: #eee;
 }
 .menu-item{
    
@@ -46,12 +49,6 @@ main{
 }
 .menu-item.active{
     background-color:  #333b4d;
-}
-.navigation a{
-    padding: 20px;
-    line-height: 60px;
-    text-decoration: none;
-    color: #eee;
 }
 .main{
     color: #444;
