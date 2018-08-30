@@ -2,33 +2,52 @@ const navigation = document.querySelector(`.navigation`).querySelectorAll(`div`)
 const sections = document.querySelectorAll(`section`)
 const ul = document.querySelector(`#tasks`)
 const form = document.querySelector(`form`)
+
+const renderRatingSines = (count) => {
+    if (count == 1) return `<i class="fas fa-exclamation"></i>`
+    else if (count == 2) return `<i class="fas fa-exclamation"></i><i class="fas fa-exclamation"></i>`
+    else if (count == 3) return `<i class="fas fa-exclamation"></i><i class="fas fa-exclamation"></i><i class="fas fa-exclamation"></i>`
+}
+
 form.addEventListener(`submit`, (e) => {
     e.preventDefault()
 
     const li = document.createElement('li')
     li.classList.add('list-item')
-    li.innerHTML = ` <h2 class="task-title">Lorem, ipsum dolor.</h2>
-                        <div class="priority">
-        Priority:
-        <i class="fas fa-exclamation"></i>
-        <i class="fas fa-exclamation"></i>
-        <i class="fas fa-exclamation"></i>
-    </div>
+    li.innerHTML = `<div class="col-1">
+                    <h2 class="task-title">${form.title.value}</h2>
+                    <div class="priority">
+                        Priority:
+                        ${renderRatingSines(form.priority.value)}
+                     </div>
+                    
+                     <div class="option-icons">
+                                    <i class="far fa-check-circle done"></i>
+                                    <i class="fas fa-edit edit-task"></i>
+                                    <i class="fas fa-times-circle delete-task"></i>
+                                </div>
+                                <div class="time-box">
+                                    <div class="start-date"><strong>Start day:</strong> 12-12-1324</div>
+                                    <div class="end-date"><strong>Deadline: </strong> 12-12-1324</div>
+                                    <div class="days-to-end" id="days-to-end"><strong>Days left:</strong> 23</div>
+                                </div>
+                            </div>
+                            <div class="col-2 show-content">
+                            <p class="task-content">${form.content.value}</p>
+                                <i class="fas fa-arrow-circle-right arrow "></i>
+                            </div>`
 
-    <p class="task-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ad
-        similique beatae esse numquam impedit!</p>
+    li.querySelector(`.show-content`).addEventListener('click', () => {
 
-    <div class="option-icons">
-        <i class="far fa-check-circle done"></i>
-        <i class="fas fa-edit edit-task"></i>
-        <i class="fas fa-times-circle delete-task"></i>
-    </div>
-    <i class="fas fa-arrow-circle-right show-content"></i>
-    <div class="time-box">
-        <div class="start-date"><strong>Start day:</strong> 12-12-1324</div>
-        <div class="end-date"><strong>Deadline: </strong> 12-12-1324</div>
-        <div class="days-to-end" id="days-to-end"><strong>Days left:</strong> 23</div>
-    </div>`
+        if (li.querySelector(`.arrow`).style.transform == "rotate(0deg)" || li.querySelector(`.arrow`).style.transform == '') {
+            li.querySelector(`.arrow`).style.transform = "rotate(180deg)"
+            li.querySelector(`.col-1`).style.width = '0'
+        }
+        else {
+            li.querySelector(`.arrow`).style.transform = "rotate(0deg)"
+            li.querySelector(`.col-1`).style.width = '100%'
+        }
+    })
     ul.appendChild(li)
     form.title.value = ''
     form.content.value = ''

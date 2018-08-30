@@ -48,6 +48,11 @@ main{
 .menu-item:hover{
     background-color: rgb(191, 190, 201);
 }
+.col-1, .col-2{
+    transition: all 2s;
+    overflow: hidden;
+}
+
 .active{
     background-color:  #333b4d;
 }
@@ -163,6 +168,10 @@ input:focus, textarea:focus{
     transform: translateY(-50%);
     font-size: 25px;
     cursor: pointer;
+}
+.arrow{
+    transition: transform 0.5s;
+
 }
 .time-box{
     display: flex;
