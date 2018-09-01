@@ -9,7 +9,7 @@ I work with it in free time now I focus on practise of ReactJS
 - VanillaJS - if time of REACT will end VanillaJS will survive SO i constantly work on my pure JS skills
 
 
-## Wrok In Progress but if ou want watch it click on the link below :) 
+## Wrok In Progress but if You want watch it click on the link below :) 
 [LINK](https://simon125.github.io/awsome-vanillaJS-todo/)
 
 ### Stuff to do 
