@@ -10,7 +10,7 @@ I work with it in free time now I focus on practise of ReactJS
 
 
 ## Wrok In Progress but if ou want watch it click on the link below :) 
-(https://simon125.github.io/awsome-vanillaJS-todo/)[LINK]
+[LINK](https://simon125.github.io/awsome-vanillaJS-todo/)
 
 ### Stuff to do 
 
